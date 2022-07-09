@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transition</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+      integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI="
+      crossorigin="anonymous"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .container {
+        margin: 32px;
+      }
+      .rect {
+        background-color: coral;
+        height: 100px;
+        width: 100px;
+        opacity: 0.5;
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: width 2s, opacity 0.5s;
+      }
+      .rect {
+        margin-bottom: 16px;
+      }
+      .rect:hover {
+        width: 100%;
+        opacity: 1;
+      }
+      .rect:nth-child(1) {
+        transition-timing-function: linear;
+      }
+      .rect:nth-child(2) {
+        transition-timing-function: ease;
+      }
+      .rect:nth-child(3) {
+        transition-timing-function: ease-in;
+      }
+      .rect:nth-child(4) {
+        transition-timing-function: ease-out;
+      }
+      .rect:nth-child(5) {
+        transition-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="rect linear">linear</div>
+      <div class="rect ease">ease</div>
+      <div class="rect ease-in">ease-in</div>
+      <div class="rect ease-out">ease-out</div>
+      <div class="rect ease-in-out">ease-in-out</div>
+    </div>
+  </body>
+</html>
